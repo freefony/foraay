@@ -8,7 +8,10 @@ angular.module('foraay', [
   'ui.router',
   'ngMaterial',
   'auth',
-  'log'
+  'log',
+  'users',
+  'db',
+  'config'
 ])
   .run(function($rootScope, $state, log, AuthService) {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {

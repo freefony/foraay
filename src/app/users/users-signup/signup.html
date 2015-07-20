@@ -1,13 +1,13 @@
 <md-input-container>
   <label>Fullname</label>
-  <input type="text">
+  <input type="text" ng-model="userSignupCtrl.user.name">
 </md-input-container>
 <md-input-container>
   <label>email</label>
-  <input type="email">
+  <input type="email" ng-model="userSignupCtrl.user.email">
 </md-input-container>
 <md-input-container>
-  <md-radio-group>
+  <md-radio-group ng-model="userSignupCtrl.user.gender">
     <label>gender</label>
     <div layout="row">
       <md-radio-button value="female">Female</md-radio-button>
@@ -17,9 +17,9 @@
 </md-input-container>
 <md-input-container>
   <label>password</label>
-  <input type="password">
+  <input type="password" ng-model="userSignupCtrl.user.password">
 </md-input-container>
 <div layout layout-align="end center" layout-margin>
-  <md-button class="md-warn md-raised">register your account</md-button>
+  <md-button class="md-primary md-raised" ng-click="userSignupCtrl.save()">register your account</md-button>
 </div>
 <p>already have an account? <md-button ui-sref="login">login here</md-button> to continue</p>

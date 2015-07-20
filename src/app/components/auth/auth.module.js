@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('auth', []);
+angular.module('auth', ['pouchDB', 'log']);
