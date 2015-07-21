@@ -1,0 +1,18 @@
+<form ng-submit="authCtrl.login()" role="form">
+  <md-input-container>
+    <label>email</label>
+    <input type="email"  ng-model="authCtrl.user.email"/>
+  </md-input-container>
+  <md-input-container>
+    <label>password</label>
+    <input type="password" ng-model="authCtrl.user.password" />
+  </md-input-container>
+  <div layout layout-align="end center" layout-margin>
+    <md-button type="submit" class="md-raised md-primary">login</md-button>
+  </div>
+  <p>
+    don't have an account worry, <md-button ui-sref="signup">create one here</md-button> and start enjoying.
+  </p>
+</form>
+
+

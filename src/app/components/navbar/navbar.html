@@ -1,12 +1,18 @@
 <md-toolbar layout="row" layout-align="center center" ng-controller="NavbarCtrl">
   <div class="md-toolbar-tools">
-    <md-button class="md-icon-button" aria-label="settings">
+    <md-button class="md-icon-button" aria-label="settings" ui-sref="home">
       <md-icon md-svg-icon="assets/images/ic_menu_24px.svg"></md-icon>
+       Foraay
     </md-button>
     <h2>
       <span>
-        Foraay
+
       </span>
     </h2>
+    <span flex></span>
+    <span ng-if="navbarCtrl.user">
+      <md-button ng-bind="navbarCtrl.user.fullname" aria-label="user fullname"></md-button>
+      <md-button ui-sref="logout">logout</md-button>
+    </span>
   </div>
 </md-toolbar>
