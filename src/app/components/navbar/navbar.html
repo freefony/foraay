@@ -8,5 +8,10 @@
         Foraay
       </span>
     </h2>
+    <span flex></span>
+    <span ng-if="navbarCtrl.user">
+      <md-button ng-bind="navbarCtrl.user.fullname" aria-label="user fullname"></md-button>
+      <md-button ui-sref="logout">logout</md-button>
+    </span>
   </div>
 </md-toolbar>

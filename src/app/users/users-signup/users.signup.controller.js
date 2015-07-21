@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('users')
-  .controller('UserSignupCtrl', function(log, AuthService, $state){
+  .controller('UserSignupCtrl', function($rootScope, log, AuthService, $state){
 
     var vm = this;
 
@@ -10,6 +10,7 @@ angular.module('users')
     vm.save = function(){
       AuthService.signup(vm.user)
         .then(function(response){
+          $rootScope.$broadcast('newLogIn', response);
           $state.go('home');
         })
         .catch(log.error);
