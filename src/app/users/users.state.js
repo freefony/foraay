@@ -10,4 +10,9 @@ angular.module('users')
         controller: 'UserSignupCtrl',
         controllerAs: 'userSignupCtrl'
       })
+      .state('userprofile', {
+        parent: 'index',
+        url: '/user/profile',
+        template: ""
+      })
   });

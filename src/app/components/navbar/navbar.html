@@ -7,11 +7,14 @@
     <span flex></span>
 
       <md-menu ng-if="navbarCtrl.user">
-        <md-button aria-label="Open phone interactions menu" class="" ng-click="$mdOpenMenu()" ng-bind="navbarCtrl.user.fullname">
+        <md-button aria-label="Open phone interactions menu" class="md-fab" ng-click="$mdOpenMenu()" >
+          <md-icon md-svg-icon="assets/images/icons/ic_person_24px.svg"></md-icon>
         </md-button>
         <md-menu-content width="4">
           <md-menu-item>
-            <md-button ui-sref="logout">view and edit profile</md-button>
+            <md-button ui-sref="userprofile">
+              view and edit profile
+            </md-button>
           </md-menu-item>
           <md-menu-item>
             <md-button ui-sref="logout">logout</md-button>
